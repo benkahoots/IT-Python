@@ -29,28 +29,34 @@ def Pow(num_1, num_2):
 	
 #This is showing the opperators
 num_1 = raw_input("Enter First Number: ")
-print "First Number Entered"
-	
 operation = raw_input("Enter operation e.g. '\+, -, /, x, '\^' ")
+num_2 = raw_input("Enter Second Number: ")
 if operator == "+":
-	return Add
+	ans = float(num_1) + float(num_2)
+	print ans
 	
 elif operator == "-":
-	return Sub
+	ans = float(num_1) - float(num_2)
+	print ans
 	
 elif operator == "/":
-        return Div
+	ans = float(num_1) / float(num_2)
+	print ans
 	
 elif operator == "x":
-        return Mul
+	ans = float(num_1) * float(num_2)
+	print ans
 
 elif operator == "^":
-	return Pow
+	ans = float(num_1) ** float(num_2)
 
 else:
 	return "You did not enter a vaild number"
-	
-num_2 = raw_input("Enter Second Number: ")
-print "First Number Entered"
 
-print operation 
+
+
+
+
+	
+
+	
