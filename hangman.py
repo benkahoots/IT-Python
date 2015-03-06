@@ -29,65 +29,8 @@ if players == "yes":
 	time.sleep(1)
 	word = raw_input()
 	
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
-	print ""
+	for i in range(0, 100):
+		print ""
 
 	print p2 + ", Enter a character to start guessing!"
 	time.sleep (0.5)
@@ -148,6 +91,7 @@ elif players == "no":
 	
 	while turns > 0:
 		failed = 0
+	
 		for character in word:
 			if character in guesses:
 				print character
@@ -167,16 +111,29 @@ elif players == "no":
 		guesses += guess
 		
 		if guess not in word:
-			turns -= 1
-			print "Wrong answer"
-			print "You have, " + str(turns), " more guesses"
+			#Original Idea coded by Nick Parsons!
+			if guesses == "hack.show":
+				for i in range(0, 10):
+					print "Hacking main interface...HBKknlrsjkJ lknKRV k Dvk KJ v"
+					print "HvjnsdKJLBVKjJNDVHKBNAKLSB KDNiKBSNlbvljbsrvkjnsbKhbLSNVkBlJNkjBVlNBV hkBNSVojb"
+					print "Breaking firewall..sdhvjkbhbDBVKJKJBnLJNlnvJKbnlnsvljkn"
+					time.sleep(1)
+					print ""
+				time.sleep(3)	
+				print "Loading word that has been decrypted, please wait..."
+				print ""
+				time.sleep(3)
+				print word + " is the word that must be guessed. Thanks for using the hacks 'r' us."
+				print ""
+					
+			else:
+				turns -= 1
+				print "Wrong answer"
+				print "You have, " + str(turns), " more guesses"
 			
-			if turns == 0:
-				print "You have lost!"
-				print "The word was, " + word + ", So if I beat you it means you lost to a bit of code, you're not that bright are you."
-	
-	
-
+		if turns == 0:
+			print "You have lost!"
+			print "The word was, " + word + ", So if I beat you it means you lost to a bit of code, you're not that bright are you."
 	
 
 
